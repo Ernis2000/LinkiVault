@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="search-bar-and-buttons">
+            <div class="search-bar-container">
+                <div id="right-buttons">
+                    <button id="accountButton" onclick="window.location.href='/main'">Go to Main Page</button>
+                    <button id="logout-button">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div id="confirmation" class="confirmation">
+        <p><b>Are you sure you want to delete your account?</b></p>
+        <p>This action cannot be undone. You will not be able to recover your account.</p>
+        <button id="confirmAccountDeletionYes">Yes</button>
+        <button id="confirmAccountDeletionNo">No</button>
+    </div>
+    <div id="passwordConfirmation" class="confirmation">
+        <p><b>Please enter your current password to confirm account deletion:</b></p>
+        <input type="password" id="passwordInput">
+        <button id="confirmPasswordYes">Confirm</button>
+        <button id="confirmPasswordNo">Cancel</button>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <h2>Account Information</h2>
+            <div id="accountCreationDate"></div>
+
+            <h2>Change Your Password</h2>
+            <form id="changePasswordForm">
+                <label for="currentPassword">Current Password:</label><br>
+                <input type="password" id="currentPassword" required><br>
+                <label for="newPassword">New Password:</label><br>
+                <input type="password" id="newPassword" required><br>
+                <label for="confirmNewPassword">Confirm New Password:</label><br>
+                <input type="password" id="confirmNewPassword" required><br>
+                <input id="changePasswordButton" type="submit" value="Change Password">
+            </form>
+            <button id="deleteAccountButton" class="danger-button">Delete Account</button>
+        </div>
+    </div>
+    <div id="customAlert" class="confirmation">
+        <p id="alertMessage"></p>
+        <button id="alertOkButton">OK</button>
+    </div>    
+    <script src="password_change.js"></script>
+</body>
+</html>

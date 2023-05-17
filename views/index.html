@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="search-bar-and-buttons">
+            <div class="search-bar-container">
+                <input type="text" id="searchInput" placeholder="Search by name">
+                <button id="searchButton">Search</button>
+                <div id="right-buttons">
+                    <button id="accountButton">Account Settings</button>
+                    <button id="logout-button">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div id="confirmation" class="confirmation">
+        <p><b>Are you sure you want to delete this record?</b></p>
+        <p>This action cannot be undone. You will not be able to recover the record.</p>
+        <button id="confirmYes">Yes</button>
+        <button id="confirmNo">No</button>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <form id="dataForm">
+                <label for="inputName">Name:</label>
+                <input type="text" id="inputName" placeholder="Enter name" required>
+                <div id="linkInputsContainer">
+                    <div class="link-input">
+                        <label for="inputLink0">Link:</label>
+                        <input id="inputLink0" type="text" class="inputLink" placeholder="Enter link">
+                        <label for="inputLinkName0">Document name:</label>
+                        <input id="inputLinkName0" type="text" class="inputLinkName" placeholder="Enter link name">
+                    </div>
+                </div>
+                <div id="linkButtonsContainer">
+                    <button type="button" id="addLinkInput">Add Link Input</button>
+                    <button type="button" id="removeLinkInput">Remove Link Input</button>
+                </div>
+                <label for="inputDate">Document creation date:</label>
+                <input type="date" id="inputDate" required>
+                <label for="ExpiryDate">Document expiry date:</label>
+                <input type="date" id="ExpiryDate" required>
+                <button type="submit" id="submitButton">Submit</button>
+            </form>
+        </div>
+        <div class="search-sort-container">
+            <div id="dataDisplay">
+                <div class="sort-container">
+                    <div id="sort-header">
+                        <div class="sort-group">
+                            <p>Sort by Date:</p>
+                            <div class="sort-wrapper">
+                                <button class="sort-button asc" id="sortDateAsc" data-sort="asc">↑</button>
+                                <button class="sort-button desc" id="sortDateDesc" data-sort="desc">↓</button>
+                            </div>
+                        </div>
+                        <div class="sort-group">
+                            <p>Sort by Name:</p>
+                            <div class="sort-wrapper">
+                                <button class="sort-button asc" id="sortNameAsc" data-sort="asc">↑</button>
+                                <button class="sort-button desc" id="sortNameDesc" data-sort="desc">↓</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fetchedData">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
